@@ -1,0 +1,11 @@
+{
+  "name": "chealth",
+  "owner": { "name": "Daniel Thomas" },
+  "plugins": [
+    {
+      "name": "chealth",
+      "source": ".",
+      "description": "Runs deterministic CLI checks and semantic analysis on CLAUDE.md files"
+    }
+  ]
+}
