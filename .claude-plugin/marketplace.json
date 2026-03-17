@@ -13,7 +13,7 @@
       "author": {
         "name": "Daniel Thomas"
       },
-      "source": ".",
+      "source": "./",
       "category": "development",
       "homepage": "https://github.com/danielithomas/chealth",
       "tags": ["claude-code", "claude-md", "linter", "best-practices"]

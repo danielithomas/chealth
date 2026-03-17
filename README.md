@@ -6,11 +6,20 @@ CLI tool and Claude Code plugin to check CLAUDE.md health against [Anthropic bes
 
 ### Claude Code Plugin (recommended)
 
-Install directly as a Claude Code plugin:
+From within a Claude Code session, add the marketplace and install:
 
-```bash
-claude plugin add danielithomas/chealth
 ```
+/plugin marketplace add danielithomas/chealth
+/plugin install chealth@danielithomas-chealth
+```
+
+Or use the interactive plugin browser:
+
+```
+/plugin
+```
+
+Navigate to the **Discover** tab after adding the marketplace.
 
 Then run `/chealth` inside any Claude Code session. The plugin runs deterministic CLI checks followed by semantic analysis powered by Claude.
 

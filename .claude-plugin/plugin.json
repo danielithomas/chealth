@@ -2,14 +2,11 @@
   "name": "chealth",
   "version": "0.1.0",
   "description": "Check CLAUDE.md health against Anthropic best practices",
-  "author": "Daniel Thomas",
+  "author": {
+    "name": "Daniel Thomas"
+  },
   "license": "MIT",
   "repository": "https://github.com/danielithomas/chealth",
   "keywords": ["claude-code", "claude-md", "linter", "best-practices"],
-  "skills": [
-    {
-      "name": "chealth",
-      "path": "skills/chealth/SKILL.md"
-    }
-  ]
+  "skills": "./skills/"
 }
