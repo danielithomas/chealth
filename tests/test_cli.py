@@ -21,7 +21,7 @@ def test_version(capsys):
     except SystemExit as e:
         assert e.code == 0
     captured = capsys.readouterr()
-    assert "0.1.0" in captured.out
+    assert "0.1.1" in captured.out
 
 
 def test_nonexistent_path(capsys):
