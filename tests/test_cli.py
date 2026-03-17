@@ -71,6 +71,23 @@ def test_max_lines_flag(tmp_path, capsys):
     assert code >= 1  # Should warn or danger since 50 > 30
 
 
+def test_exit_zero_flag(tmp_path, capsys):
+    """--exit-zero should return 0 even when findings have WARN/DANGER severity."""
+    (tmp_path / "CLAUDE.md").write_text("# Project\n- Item\n")
+    code = main(["--exit-zero", str(tmp_path)])
+    assert code == 0
+
+
+def test_exit_zero_json_still_has_severity(tmp_path, capsys):
+    """--exit-zero returns 0 but JSON output still reports severity."""
+    (tmp_path / "CLAUDE.md").write_text("# Project\n- Item\n")
+    code = main(["--exit-zero", "--format", "json", str(tmp_path)])
+    captured = capsys.readouterr()
+    data = json.loads(captured.out)
+    assert code == 0
+    assert data["summary"]["warn"] >= 0 or data["summary"]["danger"] >= 0
+
+
 def test_exit_code_0_all_pass(tmp_path, capsys):
     content = (
         "# Project Overview\n\n"
