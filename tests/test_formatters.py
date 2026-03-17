@@ -51,7 +51,7 @@ def test_json_format_valid(tmp_path):
     results = _make_results(tmp_path)
     output = format_json(results, tmp_path)
     data = json.loads(output)
-    assert data["version"] == "0.1.0"
+    assert data["version"] == "0.1.1"
     assert len(data["results"]) == 2
     assert data["summary"]["total"] == 2
     assert data["summary"]["pass"] == 1
