@@ -51,14 +51,15 @@ Exit codes: 0 = all pass, 1 = worst is WARN, 2 = worst is DANGER. `Severity` is 
 
 ## Version Management
 
-Version `0.1.0` is defined in 4 places that MUST be kept in sync:
+Version `0.1.1` is defined in 5 places that MUST be kept in sync:
 
 1. `pyproject.toml` — `version`
 2. `.claude-plugin/plugin.json` — `version`
-3. `skills/chealth/SKILL.md` — frontmatter `version`
-4. `src/chealth/__init__.py` — `__version__`
+3. `.claude-plugin/marketplace.json` — `version`
+4. `skills/chealth/SKILL.md` — frontmatter `version`
+5. `src/chealth/__init__.py` — `__version__`
 
-When bumping the version, update all 4 files.
+When bumping the version, update all 5 files.
 
 ## Git Workflow
 
