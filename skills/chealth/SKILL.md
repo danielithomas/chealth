@@ -12,7 +12,7 @@ You are performing a comprehensive health check on this project's CLAUDE.md file
 Run the chealth CLI to get structured findings:
 
 ```bash
-uv run --project "${CLAUDE_PLUGIN_ROOT}" chealth --format json . 2>&1
+uv run --project "${CLAUDE_PLUGIN_ROOT}" chealth --exit-zero --format json . 2>&1
 ```
 
 If the CLI is not installed, tell the user:

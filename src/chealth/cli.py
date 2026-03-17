@@ -41,6 +41,12 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Line count threshold (default: 200)",
     )
     parser.add_argument(
+        "--exit-zero",
+        action="store_true",
+        default=False,
+        help="Always exit 0 (report severity in output only)",
+    )
+    parser.add_argument(
         "path",
         nargs="?",
         default=".",
@@ -74,7 +80,7 @@ def main(argv: list[str] | None = None) -> int:
         output = format_text(results, project_root)
 
     print(output, end="")
-    return compute_exit_code(results)
+    return 0 if args.exit_zero else compute_exit_code(results)
 
 
 def _load_checks() -> None:
