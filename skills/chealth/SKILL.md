@@ -1,9 +1,6 @@
 ---
 name: chealth
 description: Check CLAUDE.md health against Anthropic best practices — runs deterministic CLI checks then semantic analysis
-version: 0.1.0
-min_cli_version: 0.1.0
-user-invocable: true
 ---
 
 # /chealth — CLAUDE.md Health Check
